@@ -11,7 +11,8 @@
     "content": {
       "agency": "Yoshlar ishlari agentligiga hush kelibsiz",
       "office": "Amaluyot offisi haqida",
-      "contact": "qwdqwq"
+      "contact": "qwdqwq",
+      "start": "Yoshlar ishlari agentligi"
     },
     "groupTargets": [
       "@amaliyot_offices"

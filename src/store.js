@@ -56,6 +56,8 @@ const defaultDb = () => ({
       contact: "📞 Bog'lanish",
     },
     content: {
+      start:
+        "Assalomu alaykum! Stajirovka botiga xush kelibsiz.",
       agency:
         "Agentlik haqida ma'lumot hozircha kiritilmagan. Admin paneldan yangilang.",
       office:
@@ -83,6 +85,10 @@ function readDb() {
   const db = JSON.parse(fs.readFileSync(DB_PATH, "utf8"));
   if (!db.settings.groupTargets || !Array.isArray(db.settings.groupTargets)) {
     db.settings.groupTargets = [];
+  }
+  if (!db.settings.content) db.settings.content = {};
+  if (!db.settings.content.start) {
+    db.settings.content.start = "Assalomu alaykum! Stajirovka botiga xush kelibsiz.";
   }
   if (db.settings.groupTarget && !db.settings.groupTargets.includes(db.settings.groupTarget)) {
     db.settings.groupTargets.push(db.settings.groupTarget);

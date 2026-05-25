@@ -87,6 +87,7 @@ function adminPanelKeyboard() {
       Markup.button.callback("Tugma matni", "adm_button_text_menu"),
       Markup.button.callback("Tugma manosi", "adm_button_content_menu"),
     ],
+    [Markup.button.callback("Start matni", "adm_prompt_set_start_text")],
     [Markup.button.callback("Ariza savollari", "adm_questions_menu")],
     [Markup.button.callback("Guruhlar", "adm_groups_menu")],
     [
@@ -349,7 +350,8 @@ bot.start(async (ctx) => {
       inner.admins[config.superAdminId] = { role: "super", addedAt: new Date().toISOString() };
     });
   }
-  await ctx.reply("Assalomu alaykum! Stajirovka botiga xush kelibsiz.", mainKeyboard(ctx.from.id));
+  const startText = db.settings?.content?.start || "Assalomu alaykum! Stajirovka botiga xush kelibsiz.";
+  await ctx.reply(startText, mainKeyboard(ctx.from.id));
 });
 
 bot.command("admin", async (ctx) => {
@@ -487,6 +489,11 @@ bot.on("callback_query", async (ctx) => {
       await ctx.answerCbQuery("Boglanish manosi");
       return ctx.reply("Boglanish tugmasi bosilganda chiqadigan matnni yuboring:");
     }
+    if (data === "adm_prompt_set_start_text") {
+      setAdminInput(ctx.from.id, "set_start_text");
+      await ctx.answerCbQuery("Start matni");
+      return ctx.reply("/start bosilganda chiqadigan yangi matnni yuboring:");
+    }
     if (data === "adm_prompt_set_group") {
       setAdminInput(ctx.from.id, "set_group");
       await ctx.answerCbQuery("Guruh");
@@ -591,6 +598,14 @@ bot.on("message", async (ctx) => {
       withDb((db2) => (db2.settings.content.contact = txt.trim()));
       clearAdminInput(ctx.from.id);
       return ctx.reply("Boglanish tugmasi manosi yangilandi.", adminPanelKeyboard());
+    }
+    if (pendingAdminAction === "set_start_text") {
+      withDb((db2) => {
+        if (!db2.settings.content) db2.settings.content = {};
+        db2.settings.content.start = txt.trim();
+      });
+      clearAdminInput(ctx.from.id);
+      return ctx.reply("Start matni yangilandi.", adminPanelKeyboard());
     }
     if (pendingAdminAction === "set_group" || pendingAdminAction === "add_group") {
       const newGroup = txt.trim();
