@@ -1,0 +1,14 @@
+{
+  "name": "stajirovka-telegram-bot",
+  "version": "1.0.0",
+  "description": "Stajirovka arizalarini qabul qiluvchi Telegram bot",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "telegraf": "^4.16.3"
+  }
+}

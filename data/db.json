@@ -1,0 +1,139 @@
+{
+  "settings": {
+    "applicationsOpen": true,
+    "groupTarget": "@amaliyot_offices",
+    "buttons": {
+      "apply": "📝 Ariza yuborish",
+      "agency": "🏢 Agentlik haqida",
+      "office": "Amaliyot offisi haqida",
+      "contact": "Bog'lanish tugmasi"
+    },
+    "content": {
+      "agency": "Yoshlar ishlari agentligiga hush kelibsiz",
+      "office": "Amaluyot offisi haqida",
+      "contact": "qwdqwq"
+    },
+    "groupTargets": [
+      "@amaliyot_offices"
+    ]
+  },
+  "users": {
+    "5052267021": {
+      "id": 5052267021,
+      "username": "AbdugaffarovAbubakr",
+      "firstName": "Абубакр",
+      "lastName": "Абдугаффаров",
+      "phone": "asd",
+      "createdAt": "2026-05-05T10:00:21.714Z"
+    }
+  },
+  "admins": {
+    "5052267021": {
+      "role": "super",
+      "addedAt": "2026-05-05T10:00:37.263Z"
+    },
+    "7527155299": {
+      "role": "normal",
+      "addedAt": "2026-05-25T11:20:53.770Z"
+    }
+  },
+  "applications": [],
+  "files": [],
+  "applicationQuestions": [
+    {
+      "key": "region",
+      "text": "1) Qaysi hududdansiz? Quyidagilardan birini tanlang:",
+      "options": [
+        "Qoraqalpog'iston R",
+        "Andijon viloyati",
+        "Buxoro viloyati",
+        "Jizzax viloyati",
+        "Qashqadaryo viloyati",
+        "Namangan viloyati",
+        "Navoiy viloyati",
+        "Samarqand viloyati",
+        "Sirdaryo viloyati",
+        "Surxondaryo viloyati",
+        "Toshkent viloyati",
+        "Farg'ona viloyati",
+        "Xorazm viloyati",
+        "Toshkent shahar"
+      ]
+    },
+    {
+      "key": "districtCity",
+      "text": "2) Tuman/shaharingizni yozing:"
+    },
+    {
+      "key": "mahalla",
+      "text": "3) Mahalla nomini kiriting:"
+    },
+    {
+      "key": "fio",
+      "text": "ism"
+    },
+    {
+      "key": "university",
+      "text": "2) OTM nomini kiriting:"
+    },
+    {
+      "key": "major",
+      "text": "3) Talim yonalishini kiriting:"
+    },
+    {
+      "key": "course",
+      "text": "4) Kursingizni kiriting:"
+    },
+    {
+      "key": "phone",
+      "text": "5) Telefon raqamingizni kiriting:"
+    },
+    {
+      "key": "email",
+      "text": "6) Email manzilingizni kiriting:"
+    },
+    {
+      "key": "telegramUsername",
+      "text": "7) Telegram username kiriting (@...):"
+    },
+    {
+      "key": "languages",
+      "text": "8) Chet tillari:"
+    },
+    {
+      "key": "experience",
+      "text": "9) Oldingi tajriba (volontyorlik, stajirovka va h.k.):"
+    },
+    {
+      "key": "teamwork",
+      "text": "10) Jamoaviy ish tajribasi (misol bilan):"
+    },
+    {
+      "key": "internQualities",
+      "text": "11) Stajyor qanday sifatga ega bolishi kerak?"
+    },
+    {
+      "key": "govMeaning",
+      "text": "12) Davlat tashkilotida ishlash nimani anglatadi?"
+    },
+    {
+      "key": "q13",
+      "text": "13) Qoshimcha izohlaringiz (ixtiyoriy):"
+    },
+    {
+      "key": "q14",
+      "text": "14) 6 oy davomida muntazam qatnasha olasizmi?",
+      "inline": true
+    },
+    {
+      "key": "q15",
+      "text": "15) Ofisda ishlash formatiga rozimisiz?",
+      "inline": true
+    },
+    {
+      "key": "resume",
+      "text": "16) Resume yuboring (PDF / DOC / DOCX):",
+      "file": true
+    }
+  ]
+}
